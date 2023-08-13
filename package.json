@@ -16,6 +16,10 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^4.2.3",
+        "datatables.net-bs4": "^1.13.6",
+        "datatables.net-select": "^1.7.0",
+        "datatables.net-vue3": "^2.1.2",
+        "jquery": "^3.7.0",
         "vue-router": "^4.2.4"
     }
 }

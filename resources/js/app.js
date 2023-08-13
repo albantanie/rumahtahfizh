@@ -8,10 +8,9 @@ import './bootstrap';
 import { createApp } from 'vue';
 import App from './views/App.vue'
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './pages/Home.vue'
-import Register from './pages/Register.vue'
-import Login from './pages/Login.vue'
-import Admin from './pages/Admin.vue'
+import routes from './routes.js'
+
+
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -20,23 +19,7 @@ import Admin from './pages/Admin.vue'
  */
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        { path: '/',
-        component: Home},
-        {
-            path: '/register',
-            component: Register
-        },
-         {
-            path: '/login',
-            component: Login
-        },
-        {
-            path: '/admin',
-            component: Admin
-        }
-
-    ],
+    routes
   });
 
   const app = createApp(App);
