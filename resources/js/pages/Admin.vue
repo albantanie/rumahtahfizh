@@ -85,7 +85,7 @@ import { isLoggedIn } from '@/middleware'; // Import isLoggedIn dari middleware
 
 export default {
 // Middleware
-beforeRouteEnter( next) {
+beforeRouteEnter(to, from, next) {
         // Contoh pengecekan apakah pengguna sudah login atau belum
     
         if (isLoggedIn) {
