@@ -45,71 +45,68 @@
         
     </div>
     <div class="edu-cart-page-area edu-section-gap bg-color-white">
-            <div class="container ">
-                <div class="row g-5">
-                    <div class="col-lg-12">
-                            <!-- Cart Table -->
-                            <div class="cart-table table-responsive mb--40">
-                                <table id="myTable" class="table-cart table-striped table-bordered" style="width: 100%">
-            <thead>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-12">
+          <!-- Cart Table -->
+          <div class="cart-table table-responsive mb--40">
+            <table id="myTable" class="table table-bordered" style="width: 100%">
+              <thead>
                 <tr>
-                    <th class="pro-thumbnail"><span>ID</span></th>
-                    <th class="pro-thumbnail"><span>Nama</span></th>
-                    <th class="pro-thumbnail"><span>Username</span></th>
-                    <th class="pro-thumbnail"><span>Email</span></th>
-                    <th class="pro-thumbnail"><span>Phone</span></th>
-                    <th class="pro-thumbnail"><span>Website</span></th>
+                  <th>ID</th>
+                  <th>Nama</th>
+                  <th>Pemilik</th>
+                  <th>Alamat</th>
                 </tr>
-            </thead>
-        </table>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-
-
-
-
-
-
-    
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import $ from "jquery";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.css"; //kalian bisa import ini di main.js agar dapat digunakan secara global
-import "datatables.net-bs4"; //kalian bisa import ini di main.js agar dapat digunakan secara global
-import { isLoggedIn } from '@/middleware'; // Import isLoggedIn dari middleware
+import $ from "jquery";
+import "datatables.net-bs4";
+import "datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+import { isLoggedIn } from '@/middleware';
 
 export default {
-// Middleware
-beforeRouteEnter(to, from, next) {
-        // Contoh pengecekan apakah pengguna sudah login atau belum
-    
-        if (isLoggedIn) {
-            next(); // Lanjutkan navigasi ke halaman yang dituju
-        } else {
-            next('/login'); // Redirect ke halaman login jika belum login
-        }
-    },
-
-    mounted() {
-        axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
-
-            $("#myTable").DataTable({
-                data: response.data,
-                columns: [
-                    { data: "id" },
-                    { data: "name" },
-                    { data: "username" },
-                    { data: "email" },
-                    { data: "phone" },
-                    { data: "website" },
-                ],
-            });
-        });
-    },
+  // Middleware
+  beforeRouteEnter(to, from, next) {
+    if (isLoggedIn) {
+      next();
+    } else {
+      next('/login');
+    }
+  },
+  mounted() {
+    axios.get("/api/rumahtahfizh").then((response) => {
+      $("#myTable").DataTable({
+        data: response.data,
+        columns: [
+          { data: "id" },
+          { data: "nama" },
+          { data: "pemilik" },
+          { data: "alamat" },
+        ],
+        responsive: true, // Enable responsive design
+        paging: true, // Enable pagination
+        searching: true, // Enable search box
+        ordering: true, // Enable sorting
+        info: true, // Show table information
+      });
+    });
+  },
 };
 </script>
+
+<style>
+/* Custom style for table cells */
+table.dataTable tbody td {
+  font-size: 14px; /* Adjust font size as needed */
+}
+</style>

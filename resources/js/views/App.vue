@@ -11,6 +11,7 @@ export default {
 
 </script>
 <template>
+    <notifications />
     <div class="main-wrapper">
 <Header></Header>
 <router-view></router-view>
