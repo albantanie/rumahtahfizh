@@ -7,7 +7,8 @@
                     <div class="col-lg-6 col-xl-2 col-md-6 col-6">
                         <div class="logo">
                             <router-link to="/">
-                                <img class="logo-light" src="assets/images/logo/logo.png" alt="Site Logo">
+                                <img class="logo-light" src="assets/images/rumahtahfizhlogo.png" alt="Site Logo" >
+
                             </router-link>
                         </div>
                     </div>

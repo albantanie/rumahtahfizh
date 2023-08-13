@@ -318,7 +318,7 @@ img {
   -ms-interpolation-mode: bicubic;
   border: 0;
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 45%;
   height: auto; }
 
 svg:not(:root) {
@@ -6094,7 +6094,7 @@ body.sal-disabled [data-sal|='flip'] {
   line-height: 118px;
   transition: min-height 1s ease !important; }
   .edu-header .logo a img {
-    max-height: 35px; }
+    max-height: 80px; }
   @media only screen and (max-width: 1199px) {
     .edu-header .logo a {
       height: 80px;

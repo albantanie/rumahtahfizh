@@ -8,10 +8,10 @@
                             <div class="edu-footer-widget">
                                 <div class="logo">
                                     <a href="index-2.html">
-                                        <img class="logo-light" src="assets/images/logo/logo-white.png" alt="Site Logo">
+                                        <img class="logo-light" src="assets/images/rumahtahfizhlogo.png" alt="Site Logo">
                                     </a>
                                 </div>
-                                <p class="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                <p class="description">Rumah Tahfizh Indonesia bertujuan untuk menciptakan generasi Qur'ani yang menghafal dan mengamalkan Al-Qur'an dalam kehidupan sehari-hari. Kami mendorong kedalaman pemahaman serta penerapan nilai-nilai Islam melalui pendidikan yang berintegritas.</p>
                                 <ul class="social-share">
                                     <li><a href="#"><i class="icon-Fb"></i></a></li>
                                     <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -86,7 +86,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="inner text-center">
-                                <p>Copyright 2023 <a href="#">EduVibe</a> Designed By <a href="https://themeforest.net/user/devsvibe">DevsVibe</a>. All Rights Reserved</p>
+                                <p>Copyright 2023 <router-link to="/">Rumah Tahfizh Indonesia.</router-link>All Rights Reserved</p>
                             </div>
                         </div>
                     </div>
