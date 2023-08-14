@@ -298,7 +298,7 @@
                 <div class="row text-center mt--60">
                     <div class="col-lg-12">
                         <div class="load-more-btn">
-                            <a class="edu-btn" href="course-style-1.html">All Categories<i class="icon-arrow-right-line-right"></i></a>
+                            <a class="edu-btn" href="/">All Categories<i class="icon-arrow-right-line-right"></i></a>
                         </div>
                     </div>
                 </div>
